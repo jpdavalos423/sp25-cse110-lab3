@@ -47,19 +47,21 @@
         providing advice for all the things ChatGPT won't give you advice on.
       </p>
 
-      <audio
-        controls
-        src="audio/ElevenLabs_2025-04-15T21_57_43_Antoni_pre_sp100_s50_sb75_se0_b_m2.mp3"
-      >
-        Introduction
-      </audio>
-      <br />
-      <video
-        controls
-        poster="images/download.jpeg"
-        width="500px"
-        src="video/Rickroll 4k No Copyright II Yep! Its 4k!.mp4"
-      ></video>
+      <section>
+        <audio
+          controls
+          src="audio/ElevenLabs_2025-04-15T21_57_43_Antoni_pre_sp100_s50_sb75_se0_b_m2.mp3"
+        >
+          Introduction
+        </audio>
+        <br />
+        <video
+          controls
+          poster="images/download.jpeg"
+          width="500"
+          src="video/RickRoll.mp4"
+        ></video>
+      </section>
 
       <h2>To Do</h2>
 
@@ -84,16 +86,16 @@
               us to get caught up
             </p>
           </div>
-          <span>
+          <div>
             <textarea placeholder="Name of employee"></textarea>
 
-            <section>
+            <div>
               <input type="text" list="Gender" placeholder="Gender" />
               <datalist id="Gender">
                 <option value="Male"></option>
                 <option value="Female"></option>
               </datalist>
-            </section>
+            </div>
 
             <div>Reason for missing meeting</div>
             <div>
@@ -104,7 +106,7 @@
               </select>
             </div>
 
-            <p>Date of meeting missed</p>
+            <span>Date of meeting missed</span>
             <input type="date" />
             <div>
               <p>Preferred Method of Contact</p>
@@ -117,9 +119,9 @@
               <input type="radio" id="idc" />
               <label for="idc"><strong>I Don't Care</strong></label>
             </div>
-          </span>
+          </div>
           <div>
-            <input type="checkbox" name="" id="tos" required />
+            <input type="checkbox" name="Terms" id="tos" required />
             <label for="tos">I will not be absent again</label>
           </div>
 
