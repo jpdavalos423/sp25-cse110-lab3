@@ -1,0 +1,230 @@
+/* CSS Variables with fallback */
+:root {
+  --main-color: #3498db;
+  --secondary-color: rgb(52, 152, 219);
+  --accent-color: hsl(204, 70%, 53%);
+  --text-color: color(display-p3 0.2 0.6 0.9);
+  --mixed-color: color-mix(
+    in srgb,
+    var(--main-color) 70%,
+    var(--secondary-color)
+  );
+}
+
+/* Universal Selector */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Element Selector */
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  color: var(--text-color, #333);
+  background-color: #f4f4f4;
+}
+
+/* Class Selector */
+.container {
+  width: 80%;
+  margin: auto;
+  padding: 2rem;
+  min-width: 320px;
+}
+
+/* ID Selector */
+#header {
+  background-color: var(--main-color);
+  padding: 1em 2em;
+  margin: 20px 0;
+  border: 2px solid #2980b9;
+  border-radius: 8px;
+}
+
+/* Attribute Selector */
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+}
+
+/* Pseudo-class Selector */
+button:hover {
+  background-color: var(--accent-color);
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* Selector List */
+h1,
+h2,
+h3 {
+  color: var(--main-color);
+  margin-bottom: 1rem;
+}
+
+/* Descendant Combinator */
+.container p {
+  margin-bottom: 1em;
+}
+
+/* Child Combinator */
+.nav > li {
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+/* General Sibling Combinator */
+h2 ~ p {
+  font-size: 1.1em;
+}
+
+/* Adjacent Sibling Combinator */
+h3 + p {
+  font-weight: bold;
+}
+
+/* Combining Two Selectors */
+div.highlight {
+  background-color: rgba(255, 255, 0, 0.2);
+  padding: 1rem;
+}
+
+/* Flexbox Layout */
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Grid Layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  padding: 1rem;
+}
+
+/* Units Example */
+.spacing-example {
+  /* Relative units */
+  width: 80vw;
+  margin: 2rem;
+  padding: 1.5em;
+
+  /* Absolute units */
+  border: 2px solid #000;
+  margin-top: 25px;
+  padding-bottom: 15px;
+}
+
+/* New Selector :has() */
+.container:has(> img) {
+  padding: 1rem;
+  background-color: #f0f0f0;
+}
+
+/* Nested Selectors */
+.card {
+  & h2 {
+    color: var(--secondary-color);
+
+    & span {
+      font-size: 0.8em;
+    }
+  }
+}
+
+/* Media Query for Responsiveness */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 1rem;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .flex-container {
+    flex-direction: column;
+  }
+}
+
+/* Position Examples */
+.fixed-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.relative-box {
+  position: relative;
+  left: 20px;
+}
+
+/* Display Properties */
+.hidden {
+  display: none;
+}
+
+.inline-block {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+/* Text Styles */
+.text-styled {
+  text-decoration: underline;
+  text-align: center;
+  color: var(--text-color);
+}
+
+/* Background Styles */
+.bg-styled {
+  background-color: #e0e0e0;
+}
+
+.chatgpt-logo {
+  width: 50px;
+  height: 50px;
+}
+
+/* Border Examples */
+.border-demo {
+  /* Using all border properties separately */
+  border-style: solid dashed dotted double; /* different styles for each side */
+  border-color: #ff0000 #00ff00 #0000ff #ffff00; /* different colors for each side */
+  border-width: 2px 4px 2px 4px; /* different widths for each side */
+  border-radius: 15px; /* rounded corners */
+}
+
+.border-alternative {
+  /* Alternative border example */
+  border-top-style: solid;
+  border-right-style: dashed;
+  border-bottom-style: dotted;
+  border-left-style: double;
+
+  border-top-color: red;
+  border-right-color: green;
+  border-bottom-color: blue;
+  border-left-color: yellow;
+
+  border-top-width: 1px;
+  border-right-width: 2px;
+  border-bottom-width: 3px;
+  border-left-width: 4px;
+
+  border-top-left-radius: 10px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 40px;
+}
