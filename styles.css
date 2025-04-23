@@ -3,12 +3,7 @@
   --main-color: #3498db;
   --secondary-color: rgb(52, 152, 219);
   --accent-color: hsl(204, 70%, 53%);
-  --text-color: color(display-p3 0.2 0.6 0.9);
-  --mixed-color: color-mix(
-    in srgb,
-    var(--main-color) 70%,
-    var(--secondary-color)
-  );
+  --text-color: rgb(51, 153, 230);  /* Using RGB instead of display-p3 */
 }
 
 /* Universal Selector */
@@ -133,10 +128,10 @@ div.highlight {
 
 /* Nested Selectors */
 .card {
-  & h2 {
+  h2 {
     color: var(--secondary-color);
-
-    & span {
+    
+    span {
       font-size: 0.8em;
     }
   }
